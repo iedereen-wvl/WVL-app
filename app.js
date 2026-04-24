@@ -354,17 +354,17 @@ function renderHoehel() {
     </div>
 
     <div style="margin-top:24px; color:#555; font-size:11px; text-align:center; line-height:1.8; max-width:500px;">
-      &copy; Hoehel kiekt in stief vele pohina's in't Westvloms<br>
-      (meir of elvendertihoendertust-en-vuvenvihtig).<br>
-      Dien pahina iere ku je tbest bekieken m&eacute; ruute ahtenegentich, moa nen aipet is wok hoed.
-    </div>
-        <strong style="color:#555;"> Diskleemer:</strong><br>
-    <div style="margin-top:8px; color:#555; font-size:11px; text-align:center; line-height:1.8; max-width:500px;">
-     Dat is ier al nie te serieus eni. <br>
-     Hoehel is e woordspelinge vo de klucht ip de zoekmasjine van Google.<br>
-      't Is ier ollemoale voe de leute, zonder commerce en met geslotn beuzn.<br>
-      Hoehel et niet te moakn met Google, 'tis 'thopn da ze der e bitje mee kun lach'n.
-    </div>
+  &copy; Hoehel kiekt in stief vele pohina's in't Westvloms<br>
+  (meir of elvendertihoendertust-en-vuvenvihtig).<br>
+  Dien pahina iere ku je tbest bekieken m&eacute; ruute ahtenegentich, moa nen aipet is wok hoed.
+</div>
+<strong style="color:#555; margin-top:32px; margin-bottom:4px; display:block; text-align:center;">Diskleemer:</strong>
+<div style="margin-top:4px; color:#555; font-size:11px; text-align:center; line-height:1.8; max-width:500px;">
+  Dat is ier al nie te serieus eni.<br>
+  Hoehel is e woordspelinge vo de klucht ip de zoekmasjine van Google.<br>
+  't Is ier ollemoale voe de leute, zonder commerce en met geslotn beuzn.<br>
+  Hoehel et niet te moakn met Google, 'tis 'thopn da ze der e bitje mee kun lach'n.
+</div>
 
     <div style="margin-top:80px; padding-top:24px; border-top:1px solid #222; color:#444; font-size:10px; text-align:center; line-height:1.8; max-width:500px; margin-bottom:20px;">
       <div style="margin-bottom:12px;">
