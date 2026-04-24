@@ -414,4 +414,7 @@ html, body {
   .item { padding: 14px 15px; }
   .item .label, .item .fav, .item .arrow { font-size: 18px; }
   .topbar, .subbar { font-size: 18px; }
+    #hoehel-input, #wiki-input {
+    font-size: 14px;
+    padding: 10px 12px;
 }
