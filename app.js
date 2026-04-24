@@ -304,7 +304,8 @@ function confirmDeleteFavs() {
   overlay.className = "popup-overlay";
   overlay.innerHTML = `
     <div class="popup-box">
-      <p>Ben je het zeker?</p>
+      <p>Dit verwijdert alle favorieten.</p>
+        <p>Ben je het zeker?</p>
       <div class="popup-actions">
         <button class="btn-cancel" onclick="this.closest('.popup-overlay').remove()">Annuleren</button>
         <button class="btn-confirm" onclick="deleteAllFavs()">Verwijderen</button>
