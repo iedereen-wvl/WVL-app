@@ -905,6 +905,15 @@ function renderInfo() {
         <p class="info-body">Made by Jasmine Menu.</p>
    <hr class="info-divider">
 
+<button class="info-share-btn" onclick="renderInstalleer()">
+  <svg style="width:18px;height:18px;vertical-align:middle;margin-right:8px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+    <polyline points="7 10 12 15 17 10"/>
+    <line x1="12" y1="15" x2="12" y2="3"/>
+  </svg>
+  Installeer deze app
+</button>
+
 <button class="info-share-btn" onclick="shareApp()">
   <svg style="width:18px;height:18px;vertical-align:middle;margin-right:8px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
     <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
@@ -956,6 +965,136 @@ function shareApp() {
       prompt("Kopieer deze link:", url);
     });
   }
+}
+
+function renderInstalleer() {
+  activeTab = "info";
+  currentTheme = null;
+  document.getElementById("title").innerHTML = `
+    <div class="back" onclick="renderInfo()">&#8592; Terug</div>
+    <div class="title-text">INSTALLEER</div>
+  `;
+
+  const content = document.getElementById("content");
+  content.innerHTML = "";
+
+  const inner = document.createElement("div");
+  inner.className = "info-content";
+  inner.innerHTML = `
+    <p class="info-section-title">Installeer deze app</p>
+    <p class="info-body">
+      Je kan deze app gratis toevoegen aan je startscherm, net zoals een gewone app. 
+      Ze werkt dan ook zonder internet (voor de geluiden die al geladen zijn).
+    </p>
+
+    <hr class="info-divider">
+
+    <p class="info-section-title" style="color:white;">
+      <svg style="width:22px;height:22px;vertical-align:middle;margin-right:6px;" viewBox="0 0 24 24">
+        <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.78 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.76 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z" fill="white"/>
+      </svg>
+      iPhone / iPad
+    </p>
+
+    <div style="background:#1a1a1a; border-radius:10px; padding:16px; margin-bottom:20px; color:#ccc; font-size:14px; line-height:2;">
+      <div style="margin-bottom:10px;">
+        <span style="background:#333; border-radius:50%; width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; margin-right:8px; font-weight:bold; color:white;">1</span>
+        Open <b style="color:white;">Safari</b> op je iPhone of iPad.<br>
+        <span style="color:#888; font-size:12px; margin-left:32px;">⚠️ Werkt enkel in Safari, niet in Chrome of Firefox</span>
+      </div>
+      <div style="margin-bottom:10px;">
+        <span style="background:#333; border-radius:50%; width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; margin-right:8px; font-weight:bold; color:white;">2</span>
+        Ga naar <b style="color:white;">iedereen-wvl.github.io/WVL-app</b>
+      </div>
+      <div style="margin-bottom:10px;">
+        <span style="background:#333; border-radius:50%; width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; margin-right:8px; font-weight:bold; color:white;">3</span>
+        Tik op het
+        <svg style="width:16px;height:16px;vertical-align:middle;margin:0 4px;" viewBox="0 0 24 24" fill="none" stroke="#4a9eff" stroke-width="2">
+          <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
+          <polyline points="16 6 12 2 8 6"/>
+          <line x1="12" y1="2" x2="12" y2="15"/>
+        </svg>
+        <b style="color:#4a9eff;">Deel</b>-knop onderaan in Safari
+      </div>
+      <div style="margin-bottom:10px;">
+        <span style="background:#333; border-radius:50%; width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; margin-right:8px; font-weight:bold; color:white;">4</span>
+        Scroll naar beneden en tik op <b style="color:white;">"Zet op beginscherm"</b>
+      </div>
+      <div>
+        <span style="background:#333; border-radius:50%; width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; margin-right:8px; font-weight:bold; color:white;">5</span>
+        Tik rechtsboven op <b style="color:white;">"Voeg toe"</b> — klaar!
+      </div>
+    </div>
+
+    <hr class="info-divider">
+
+    <p class="info-section-title" style="color:white;">
+      <svg style="width:22px;height:22px;vertical-align:middle;margin-right:6px;" viewBox="0 0 24 24">
+        <path d="M17.523 15.341A7.653 7.653 0 0 1 12 17.538 7.656 7.656 0 0 1 4.344 9.88 7.655 7.655 0 0 1 12 2.225a7.655 7.655 0 0 1 6.223 3.168l-2.51 2.51A4.405 4.405 0 0 0 12 5.476a4.405 4.405 0 0 0-4.405 4.404A4.405 4.405 0 0 0 12 14.285a4.4 4.4 0 0 0 3.313-1.494l2.21 2.55z" fill="white"/>
+        <path d="M21.46 10.607h-9.483v3.251h5.46a4.66 4.66 0 0 1-2.137 2.483l2.21 2.55C19.174 17.308 21.46 14.4 21.46 10.607z" fill="white"/>
+      </svg>
+      Android
+    </p>
+
+    <div style="background:#1a1a1a; border-radius:10px; padding:16px; margin-bottom:20px; color:#ccc; font-size:14px; line-height:2;">
+      <div style="margin-bottom:10px;">
+        <span style="background:#333; border-radius:50%; width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; margin-right:8px; font-weight:bold; color:white;">1</span>
+        Open <b style="color:white;">Chrome</b> op je Android toestel
+      </div>
+      <div style="margin-bottom:10px;">
+        <span style="background:#333; border-radius:50%; width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; margin-right:8px; font-weight:bold; color:white;">2</span>
+        Ga naar <b style="color:white;">iedereen-wvl.github.io/WVL-app</b>
+      </div>
+      <div style="margin-bottom:10px;">
+        <span style="background:#333; border-radius:50%; width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; margin-right:8px; font-weight:bold; color:white;">3</span>
+        Tik op de <b style="color:white;">⋮</b> drie puntjes rechtsboven
+      </div>
+      <div style="margin-bottom:10px;">
+        <span style="background:#333; border-radius:50%; width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; margin-right:8px; font-weight:bold; color:white;">4</span>
+        Tik op <b style="color:white;">"Toevoegen aan startscherm"</b>
+      </div>
+      <div>
+        <span style="background:#333; border-radius:50%; width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; margin-right:8px; font-weight:bold; color:white;">5</span>
+        Tik op <b style="color:white;">"Toevoegen"</b> — klaar!
+      </div>
+    </div>
+
+    <hr class="info-divider">
+
+    <p class="info-section-title" style="color:white;">Desktop (Windows / Mac)</p>
+
+    <div style="background:#1a1a1a; border-radius:10px; padding:16px; margin-bottom:20px; color:#ccc; font-size:14px; line-height:2;">
+      <div style="margin-bottom:10px;">
+        <span style="background:#333; border-radius:50%; width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; margin-right:8px; font-weight:bold; color:white;">1</span>
+        Open <b style="color:white;">Chrome of Edge</b>
+      </div>
+      <div style="margin-bottom:10px;">
+        <span style="background:#333; border-radius:50%; width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; margin-right:8px; font-weight:bold; color:white;">2</span>
+        Ga naar <b style="color:white;">iedereen-wvl.github.io/WVL-app</b>
+      </div>
+      <div style="margin-bottom:10px;">
+        <span style="background:#333; border-radius:50%; width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; margin-right:8px; font-weight:bold; color:white;">3</span>
+        Klik op het
+        <svg style="width:16px;height:16px;vertical-align:middle;margin:0 4px;" viewBox="0 0 24 24" fill="none" stroke="#4a9eff" stroke-width="2">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        <b style="color:#4a9eff;">installeer</b>-icoontje rechts in de adresbalk
+      </div>
+      <div>
+        <span style="background:#333; border-radius:50%; width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; margin-right:8px; font-weight:bold; color:white;">4</span>
+        Klik op <b style="color:white;">"Installeren"</b> — klaar!
+      </div>
+    </div>
+
+    <p style="color:#666; font-size:12px; text-align:center; margin-top:10px; margin-bottom:30px;">
+      De app is gratis, bevat geen advertenties en gebruikt geen internet na de eerste keer laden.
+    </p>
+  `;
+  content.appendChild(inner);
+
+  renderBottombar();
 }
 // =======================
 // START
