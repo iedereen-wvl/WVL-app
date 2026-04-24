@@ -402,9 +402,11 @@ function renderHoehel() {
 
 function hoehelZoeken() {
   const query = document.getElementById("hoehel-input")?.value?.trim();
-  playEasterEgg();
   if (!query) return;
-  window.open(`https://www.google.be/search?q=${encodeURIComponent(query)}`, "_blank");
+  playEasterEgg();
+  setTimeout(() => {
+    window.open(`https://www.google.be/search?q=${encodeURIComponent(query)}`, "_blank");
+  }, 300);
 }
 
 function hoehelKhonSjans() {
@@ -413,7 +415,9 @@ function hoehelKhonSjans() {
   const url = query
     ? `https://www.google.be/search?q=${encodeURIComponent(query)}&btnI=1`
     : "https://hoehel.be";
-  window.open(url, "_blank");
+  setTimeout(() => {
+    window.open(url, "_blank");
+  }, 300);
 }
 
 function wikiSVG(active) {
@@ -543,11 +547,12 @@ function renderWiki() {
 function wikiZoeken() {
   const query = document.getElementById("wiki-input")?.value?.trim();
   playEasterEgg();
-  if (!query) {
-    window.open("https://vls.wikipedia.org/wiki/Voorblad", "_blank");
-    return;
-  }
-  window.open(`https://vls.wikipedia.org/wiki/Specioal:Zoeken?search=${encodeURIComponent(query)}`, "_blank");
+  const url = query
+    ? `https://vls.wikipedia.org/wiki/Specioal:Zoeken?search=${encodeURIComponent(query)}`
+    : "https://vls.wikipedia.org/wiki/Voorblad";
+  setTimeout(() => {
+    window.open(url, "_blank");
+  }, 300);
 }
 
 const EASTER_EGG_SOUNDS = [
