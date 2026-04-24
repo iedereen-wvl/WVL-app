@@ -422,3 +422,21 @@ html, body {
     font-size: 14px;
     padding: 10px 12px;
 }
+  @media all and (display-mode: standalone) {
+  .bottombar {
+    padding-bottom: max(env(safe-area-inset-bottom), 20px);
+    height: calc(80px + max(env(safe-area-inset-bottom), 20px));
+  }
+
+  #content {
+    bottom: calc(80px + max(env(safe-area-inset-bottom), 20px));
+  }
+
+  .quiz-badge {
+    bottom: calc(80px + max(env(safe-area-inset-bottom), 20px));
+  }
+
+  #content.quiz-active {
+    bottom: calc(108px + max(env(safe-area-inset-bottom), 20px));
+  }
+}
