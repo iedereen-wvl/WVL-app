@@ -402,12 +402,14 @@ function renderHoehel() {
 
 function hoehelZoeken() {
   const query = document.getElementById("hoehel-input")?.value?.trim();
+  playEasterEgg();
   if (!query) return;
   window.open(`https://www.google.be/search?q=${encodeURIComponent(query)}`, "_blank");
 }
 
 function hoehelKhonSjans() {
   const query = document.getElementById("hoehel-input")?.value?.trim();
+  playEasterEgg();
   const url = query
     ? `https://www.google.be/search?q=${encodeURIComponent(query)}&btnI=1`
     : "https://hoehel.be";
@@ -440,30 +442,33 @@ function renderWiki() {
   inner.className = "info-content";
   inner.style.cssText = "display:flex; flex-direction:column; align-items:center; padding-top:30px;";
   inner.innerHTML = `
-    <img src="https://vls.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-vls.svg" 
-      style="max-width:280px; width:80%; margin-bottom:28px;" alt="Wikipedia West-Vlams">
+    <a href="https://vls.wikipedia.org/wiki/Voorblad" target="_blank" 
+      style="display:flex; flex-direction:column; align-items:center; background:white; border-radius:8px; padding:16px 24px; margin-bottom:28px; text-decoration:none; width:100%; max-width:400px; box-sizing:border-box;">
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:6px;">
+        <img src="https://vls.wikipedia.org/static/images/icons/wikipedia.png" 
+          style="width:50px; height:50px; object-fit:contain;" alt="Wikipedia logo">
+        <img src="https://vls.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en.svg" 
+          style="height:28px; width:auto;" alt="Wikipedia">
+      </div>
+      <img src="https://vls.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-vls.svg" 
+        style="height:16px; width:auto;" alt="Den vryen encyclopedie">
+    </a>
 
     <div style="width:100%; max-width:500px; margin-bottom:16px;">
       <div style="display:flex; align-items:center; border:1px solid #555; border-radius:4px; background:#1a1a1a; overflow:hidden;">
-        <span style="padding:0 12px; color:#888; font-size:18px;">&#128269;</span>
         <input
           id="wiki-input"
           type="text"
           placeholder="Deurzoek Wikipedia"
-          style="flex:1; padding:12px 8px; border:none; background:transparent; color:white; font-family:WVL,sans-serif; font-size:16px; outline:none;"
+          style="flex:1; padding:12px 14px; border:none; background:transparent; color:white; font-family:WVL,sans-serif; font-size:16px; outline:none;"
         >
-        <button onclick="wikiZoeken()" style="padding:10px 16px; border:none; border-left:1px solid #555; background:#2a2a2a; color:#ccc; font-family:WVL,sans-serif; font-size:14px; cursor:pointer; white-space:nowrap;">
+        <button onclick="wikiZoeken()" style="padding:12px 16px; border:none; border-left:1px solid #555; background:#f8f9fa; color:#333; font-family:WVL,sans-serif; font-size:14px; cursor:pointer; white-space:nowrap;">
           Zoekn
         </button>
       </div>
     </div>
 
-    <a href="https://vls.wikipedia.org/wiki/Voorblad" target="_blank" 
-      style="display:block; text-align:center; color:#4a9eff; font-size:13px; padding:8px 0; margin-bottom:24px;">
-      Naor de voorpagina
-    </a>
-
-    <div style="width:100%; max-width:500px; border-top:1px solid #222; padding-top:20px; color:#ccc; font-size:14px; line-height:1.9; text-align:center;">
+    <div style="width:100%; max-width:500px; border-top:1px solid #222; padding-top:20px; color:#ccc; font-size:14px; line-height:1.9; text-align:center; margin-top:8px;">
       <big><b>Welgekommn by de <a href="https://vls.wikipedia.org/wiki/West-Vlams" target="_blank" style="color:#4a9eff;">West-Vlamsche</a> Wikipedia!</b></big>
     </div>
 
@@ -537,6 +542,7 @@ function renderWiki() {
 
 function wikiZoeken() {
   const query = document.getElementById("wiki-input")?.value?.trim();
+  playEasterEgg();
   if (!query) {
     window.open("https://vls.wikipedia.org/wiki/Voorblad", "_blank");
     return;
@@ -544,6 +550,46 @@ function wikiZoeken() {
   window.open(`https://vls.wikipedia.org/wiki/Specioal:Zoeken?search=${encodeURIComponent(query)}`, "_blank");
 }
 
+const EASTER_EGG_SOUNDS = [
+  "WVL_APP_10_UitdrukkingenKortrijk_OeScjeetDaNu.mp3",
+  "WVL_APP_9_UitdrukkingenRoeselare_GifMaChette.mp3",
+  "in_de_zunne_en_ut_de_wind___t_is_doar_daj_de_leegaarts_vindt_V_2.mp3",
+  "WVL_APP_9_UitdrukkingenRoeselare_HeidIerNieTePiep'n.mp3",
+  "t_sop_is_de_kolen_nie_weird.mp3",
+  "Ewel__sante__me_ratje.mp3",
+  "Tut_te_fe_te.mp3",
+  "_t_schoap_e_s_de_preute_of.mp3",
+  "WVL_APP_8_UitdrukkingenOostende_TisOalGinOarSnien.mp3",
+  "tis_van_lek_mien_liptje.mp3",
+  "t_es_betre_goe_geeten_dan_t_bedde_versleten.mp3",
+  "Je_zoe_je_duum_in_je_gat_breken.mp3",
+  "k_Wit_zoender.mp3",
+  "WVL_APP_10_UitdrukkingenKortrijk_TwaMoZusteVo.mp3",
+  "ti_tiet_ta_tut_is.mp3",
+  "tes_un_besche_ten_comme_che.mp3",
+  "WVL_APP_10_UitdrukkingenKortrijk_GeMeugIpUweKinnekloppen.mp3",
+  "WVL_APP_9_UitdrukkingenRoeselare_PreusLikVijrtig.mp3",
+  "_t_lopt_van_de_schuppe.mp3",
+  "In_de_kerke_pissen_en__tip_d_Hillegen_steken.mp3",
+  "WVL_APP_10_UitdrukkingenIeper_KukkettekikElpen.mp3",
+  "j_es_nie_van_nen__oaze_gepoept.mp3",
+  "WVL_APP_9_UitdrukkingenRoeselare_TisNeNoekOf.mp3",
+  "WVL_APP_9_UitdrukkingenRoeselare_GeMoeDjeMuleOed'n.mp3",
+  "WVL_APP_10_UitdrukkingenBrugge_ZoRoendOfEnEi.mp3",
+  "WVL_APP_10_UitdrukkingenBrugge_MoGowZeg.mp3",
+  "WVL_APP_8_UitdrukkingenOostende_OhGeireMeneireMeTeinDoeZeir.mp3",
+  "WVL_APP_10_UitdrukkingenBrugge_MeVeleVuuvnEnZessen.mp3",
+  "Scheur_je_puuste.mp3",
+  "Joen_kitten_smoeten.mp3",
+  "WVL_APP_10_UitdrukkingenKortrijk_TenEGinAvanse.mp3",
+  "ja_ikvorm.mp3",
+  "wat_is_er.mp3"
+];
+
+function playEasterEgg() {
+  const random = EASTER_EGG_SOUNDS[Math.floor(Math.random() * EASTER_EGG_SOUNDS.length)];
+  play(cleanPath(random));
+}
 // =======================
 // POPUP
 // =======================
