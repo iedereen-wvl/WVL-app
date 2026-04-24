@@ -913,8 +913,9 @@ function renderInfo() {
   Deel deze app
 </button>
 
-<a href="https://www.west-vlaanderen.be/artikel/app-iedereen-west-vlaams-t-nieuw-voor-de-eindejaarsfeesten" target="_blank" class="info-link" style="background:#333; border:1px solid #444; border-radius:10px; color:#ccc; text-decoration:none; display:block; text-align:center; padding:14px; margin-bottom:12px;">
-  &#127760; West-Vlaanderen.be
+<a href="https://www.west-vlaanderen.be/artikel/app-iedereen-west-vlaams-t-nieuw-voor-de-eindejaarsfeesten" target="_blank" class="info-link" style="background:#333; border:1px solid #444; border-radius:10px; color:#ccc; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:10px; padding:14px; margin-bottom:12px;">
+  <img src="img/logo_wvl@2x.png" style="height:24px; width:auto; object-fit:contain;">
+  West-Vlaanderen.be
 </a>
 
 <a href="https://vls.wikipedia.org/wiki/Iedereen_West-Vlaams" target="_blank" class="info-link" style="background:#333; border:1px solid #444; border-radius:10px; color:#ccc; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:10px; padding:14px; margin-bottom:12px;">
