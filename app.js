@@ -719,7 +719,7 @@ function renderItem(item, onFavClick) {
       label.innerHTML = fixSpacing(displayTitle);
       label.classList.remove("showing-dialect");
       flipTimeout = null;
-    }, 2000);
+    }, 5000);
   };
 
   div.querySelector(".fav").onclick = (e) => {
