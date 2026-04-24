@@ -1022,7 +1022,7 @@ function renderInstalleer() {
       </div>
       <div>
         <span style="background:#333; border-radius:50%; width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; margin-right:8px; font-weight:bold; color:white;">5</span>
-        Tik rechtsboven op <b style="color:white;">"Voeg toe"</b> — klaar!
+        Tik rechtsboven op <b style="color:white;">"Voeg toe"</b>
       </div>
     </div>
 
@@ -1055,7 +1055,7 @@ function renderInstalleer() {
       </div>
       <div>
         <span style="background:#333; border-radius:50%; width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; margin-right:8px; font-weight:bold; color:white;">5</span>
-        Tik op <b style="color:white;">"Toevoegen"</b> — klaar!
+        Tik op <b style="color:white;">"Toevoegen"</b>
       </div>
     </div>
 
