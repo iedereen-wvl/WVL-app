@@ -324,96 +324,69 @@ function renderHoehel() {
   inner.className = "info-content";
   inner.style.cssText = "display:flex; flex-direction:column; align-items:center; padding-top: 40px;";
   inner.innerHTML = `
-    <div style="font-size:64px; font-weight:bold; margin-bottom:8px; letter-spacing:-2px;">
-      <span style="color:#4285F4">H</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">e</span><span style="color:#4285F4">h</span><span style="color:#34A853">e</span><span style="color:#EA4335">l</span><span style="color: white">.be</span>
+    <div style="font-size:64px; font-weight:bold; margin-bottom:8px; letter-spacing:-2px; line-height:1;">
+      <span style="color:#4285F4">H</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">e</span><span style="color:#4285F4">h</span><span style="color:#34A853">e</span><span style="color:#EA4335">l</span><span style="color:white; font-size:32px; vertical-align:middle;">.be</span>
     </div>
     <div style="color:#aaa; font-size:14px; margin-bottom:32px;">West-Vloander'n</div>
-    <div style="width:100%; max-width:500px; display:flex; gap:8px; margin-bottom:24px;">
+
+    <div style="width:100%; max-width:500px; display:flex; gap:8px; margin-bottom:16px;">
       <input 
         id="hoehel-input"
         type="text" 
-        placeholder="Hoehel zoek'n..."
-        style="
-          flex:1;
-          padding: 12px 16px;
-          border-radius: 24px;
-          border: 1px solid #444;
-          background: #1a1a1a;
-          color: white;
-          font-family: WVL, sans-serif;
-          font-size: 16px;
-          outline: none;
-        "
+        placeholder="Zeg et eki wa daj moe weet'n..."
+        style="flex:1; padding:12px 16px; border-radius:24px; border:1px solid #444; background:#1a1a1a; color:white; font-family:WVL,sans-serif; font-size:16px; outline:none;"
       >
     </div>
-    <button onclick="hoehelZoeken()" style="
-      padding: 10px 20px;
-      border-radius: 6px;
-      border: 1px solid #444;
-      background: #222;
-      color: #ccc;
-      font-family: WVL, sans-serif;
-      font-size: 14px;
-      cursor: pointer;
-      margin-bottom: 10px;
-      width: 100%;
-      max-width: 500px;
-    ">Zoek'n me Hoehel</button>
-    <button onclick="hoehelKhonSjans()" style="
-      padding: 10px 20px;
-      border-radius: 6px;
-      border: 1px solid #444;
-      background: #222;
-      color: #ccc;
-      font-family: WVL, sans-serif;
-      font-size: 14px;
-      cursor: pointer;
-      width: 100%;
-      max-width: 500px;
-    ">Ip goe heluk</button>
-    <div style="margin-top:30px; color:#666; font-size:12px; text-align:center;">
-      Da is ier e versie van Hoehel int: 
-      <a href="https://hoehel.be" target="_blank" style="color:#4a9eff;">Westvloams</a>
-    </div>
-    <div style="margin-top:30px; color:#666; font-size:12px; text-align:center;">
-      Origineel eje hoehel wok in: 
-       <a href="https://www.google.com/?hl=en" target="_blank" style="color:#4a9eff;">'t Engels</a> &nbsp;
-      <a href="https://www.google.com/?hl=fr" target="_blank" style="color:#4a9eff;">'T Frans</a> &nbsp;
-         <a href="https://www.google.com/?hl=de" target="_blank" style="color:#4a9eff;">'T Duts</a> &nbsp;
-                <a href="https://www.google.be" target="_blank" style="color:#4a9eff;">'Vo d'Hollanders</a>
-    </div>
-    <div style="margin-top:30px; color:#666; font-size:12px; text-align:center;">
-      © Hoehel kiekt in stief vele pohina's in't Westvloms (meir of elvendertihoendertust-en-vuvenvihtig).
-Dien pahina iere ku je tbest bekieken mé ruute ahtenegentich, moa nen aipet is wok hoed.
-      
-      Diskleemer:
-      Dat is ier al nie te serieus eni.
-      Hoehel is e woordspelinge vo de klucht ip de zoekmasjine van Google.
-      't Is ier ollemoale voe de leute, zonder commerce en met geslotn beuzn.
-      Hoehel et niet te moakn met Google, 'tis 'thopn da ze der e bitje mee kun lach'n. 
-    </div>
-    <div style="margin-top:30px; color:#666; font-size:12px; text-align:center;">
-   Disclaimer(NL):
-Hoehel is een parodiewebsite en is niet verbonden met, gesponsord door of gelieerd aan Google LLC.
-Alle handelsmerken, logo’s en merknamen zijn eigendom van hun respectieve eigenaars.
-Deze website is gratis, bevat geen advertenties en is niet bedoeld voor commercieel gebruik.
 
-Disclaimer (EN):
-Hoehel is a parody website and is not affiliated with, endorsed by, or associated with Google LLC.
-All trademarks, logos, and brand names are the property of their respective owners.
-This website is free, contains no advertisements, and is not intended for commercial use.
+    <button onclick="hoehelZoeken()" style="padding:10px 20px; border-radius:6px; border:1px solid #444; background:#222; color:#ccc; font-family:WVL,sans-serif; font-size:14px; cursor:pointer; margin-bottom:10px; width:100%; max-width:500px;">Zoek'n me Hoehel</button>
+    <button onclick="hoehelKhonSjans()" style="padding:10px 20px; border-radius:6px; border:1px solid #444; background:#222; color:#ccc; font-family:WVL,sans-serif; font-size:14px; cursor:pointer; width:100%; max-width:500px;">Ip goe heluk</button>
+
+    <div style="margin-top:24px; color:#666; font-size:12px; text-align:center; line-height:2;">
+      Da is ier e versie van Hoehel int: <a href="https://hoehel.be" target="_blank" style="color:#4a9eff;">Westvloams</a>
+    </div>
+
+    <div style="margin-top:8px; color:#666; font-size:12px; text-align:center; line-height:2;">
+      Origineel eje hoehel wok in:
+      <a href="https://www.google.com/?hl=en" target="_blank" style="color:#4a9eff;">'t Engels</a> &middot;
+      <a href="https://www.google.com/?hl=fr" target="_blank" style="color:#4a9eff;">'t Frans</a> &middot;
+      <a href="https://www.google.com/?hl=de" target="_blank" style="color:#4a9eff;">'t Duts</a> &middot;
+      <a href="https://www.google.be" target="_blank" style="color:#4a9eff;">'Vo d'Hollanders</a>
+    </div>
+
+    <div style="margin-top:24px; color:#555; font-size:11px; text-align:center; line-height:1.8; max-width:500px;">
+      &copy; Hoehel kiekt in stief vele pohina's in't Westvloms (meir of elvendertihoendertust-en-vuvenvihtig).<br>
+      Dien pahina iere ku je tbest bekieken m&eacute; ruute ahtenegentich, moa nen aipet is wok hoed.
+    </div>
+
+    <div style="margin-top:8px; color:#555; font-size:11px; text-align:center; line-height:1.8; max-width:500px;">
+      Diskleemer: Dat is ier al nie te serieus eni. Hoehel is e woordspelinge vo de klucht ip de zoekmasjine van Google.
+      't Is ier ollemoale voe de leute, zonder commerce en met geslotn beuzn.
+      Hoehel et niet te moakn met Google, 'tis 'thopn da ze der e bitje mee kun lach'n.
+    </div>
+
+    <div style="margin-top:80px; padding-top:24px; border-top:1px solid #222; color:#444; font-size:10px; text-align:center; line-height:1.8; max-width:500px; margin-bottom:20px;">
+      <div style="margin-bottom:12px;">
+        <strong style="color:#555;">Disclaimer (NL)</strong><br>
+        Hoehel is een parodiewebsite en is niet verbonden met, gesponsord door of gelieerd aan Google LLC.
+        Alle handelsmerken, logo's en merknamen zijn eigendom van hun respectieve eigenaars.
+        Deze website is gratis, bevat geen advertenties en is niet bedoeld voor commercieel gebruik.
+      </div>
+      <div>
+        <strong style="color:#555;">Disclaimer (EN)</strong><br>
+        Hoehel is a parody website and is not affiliated with, endorsed by, or associated with Google LLC.
+        All trademarks, logos, and brand names are the property of their respective owners.
+        This website is free, contains no advertisements, and is not intended for commercial use.
+      </div>
     </div>
   `;
   content.appendChild(inner);
 
-  // Enter toets werkt ook
   setTimeout(() => {
     const input = document.getElementById("hoehel-input");
     if (input) {
       input.addEventListener("keydown", (e) => {
         if (e.key === "Enter") hoehelZoeken();
       });
-      input.focus();
     }
   }, 100);
 
