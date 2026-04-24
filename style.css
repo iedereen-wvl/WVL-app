@@ -79,9 +79,9 @@ html, body {
   top: 65px;
   left: 0;
   right: 0;
-  background: #0f0f0f;
+  background: black;
   text-align: center;
-  padding: 12px 10px;
+  padding: 8px 10px;
   font-weight: bold;
   z-index: 19;
   border-bottom: 1px solid #333;
@@ -149,12 +149,12 @@ html, body {
 /* ===== CONTENT AREA ===== */
 #content {
   position: fixed;
-  top: 110px;
+  top: 120px;
   bottom: 80px;
   left: 0;
   right: 0;
   overflow-y: auto;
-  background: #0f0f0f;
+  background: black;
 }
 
 #content-inner {
@@ -381,9 +381,9 @@ html, body {
 .info-share-btn:active {
   background: #444;
 }
-/* ===== LOGO ===== */
+/* ===== LOGO IEDEREEN WEStvlAMS ===== */
 .logo {
-  height: 30px;
+  height: 42px;
   max-height: 100%;
   object-fit: contain;
 }
