@@ -325,7 +325,7 @@ function renderHoehel() {
   inner.style.cssText = "display:flex; flex-direction:column; align-items:center; padding-top: 40px;";
   inner.innerHTML = `
     <div style="font-size:64px; font-weight:bold; margin-bottom:8px; letter-spacing:-2px;">
-      <span style="color:#4285F4">H</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">e</span><span style="color:#4285F4">h</span><span style="color:#34A853">e</span><span style="color:#EA4335">l</span>
+      <span style="color:#4285F4">H</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">e</span><span style="color:#4285F4">h</span><span style="color:#34A853">e</span><span style="color:#EA4335">l</span><span style="color: white">.be</span>
     </div>
     <div style="color:#aaa; font-size:14px; margin-bottom:32px;">West-Vloander'n</div>
     <div style="width:100%; max-width:500px; display:flex; gap:8px; margin-bottom:24px;">
@@ -345,17 +345,6 @@ function renderHoehel() {
           outline: none;
         "
       >
-      <button onclick="hoehelZoeken()" style="
-        padding: 12px 20px;
-        border-radius: 24px;
-        border: none;
-        background: #333;
-        color: white;
-        font-family: WVL, sans-serif;
-        font-size: 14px;
-        cursor: pointer;
-        white-space: nowrap;
-      ">Zoek'n</button>
     </div>
     <button onclick="hoehelZoeken()" style="
       padding: 10px 20px;
@@ -369,7 +358,7 @@ function renderHoehel() {
       margin-bottom: 10px;
       width: 100%;
       max-width: 500px;
-    ">Hoehel zoek'n</button>
+    ">Zoek'n me Hoehel</button>
     <button onclick="hoehelKhonSjans()" style="
       padding: 10px 20px;
       border-radius: 6px;
@@ -381,11 +370,38 @@ function renderHoehel() {
       cursor: pointer;
       width: 100%;
       max-width: 500px;
-    ">K'hon sjans \u00e8n</button>
+    ">Ip goe heluk</button>
     <div style="margin-top:30px; color:#666; font-size:12px; text-align:center;">
-      Hoehel wok in: 
-      <a href="https://hoehel.be" target="_blank" style="color:#4a9eff;">Westvloams</a> &nbsp;
-      <a href="https://google.be" target="_blank" style="color:#4a9eff;">Google.be</a>
+      Da is ier e versie van Hoehel int: 
+      <a href="https://hoehel.be" target="_blank" style="color:#4a9eff;">Westvloams</a>
+    </div>
+    <div style="margin-top:30px; color:#666; font-size:12px; text-align:center;">
+      Origineel eje hoehel wok in: 
+       <a href="https://www.google.com/?hl=en" target="_blank" style="color:#4a9eff;">'t Engels</a> &nbsp;
+      <a href="https://www.google.com/?hl=fr" target="_blank" style="color:#4a9eff;">'T Frans</a> &nbsp;
+         <a href="https://www.google.com/?hl=de" target="_blank" style="color:#4a9eff;">'T Duts</a> &nbsp;
+                <a href="https://www.google.be" target="_blank" style="color:#4a9eff;">'Vo d'Hollanders</a>
+    </div>
+    <div style="margin-top:30px; color:#666; font-size:12px; text-align:center;">
+      © Hoehel kiekt in stief vele pohina's in't Westvloms (meir of elvendertihoendertust-en-vuvenvihtig).
+Dien pahina iere ku je tbest bekieken mé ruute ahtenegentich, moa nen aipet is wok hoed.
+      
+      Diskleemer:
+      Dat is ier al nie te serieus eni.
+      Hoehel is e woordspelinge vo de klucht ip de zoekmasjine van Google.
+      't Is ier ollemoale voe de leute, zonder commerce en met geslotn beuzn.
+      Hoehel et niet te moakn met Google, 'tis 'thopn da ze der e bitje mee kun lach'n. 
+    </div>
+    <div style="margin-top:30px; color:#666; font-size:12px; text-align:center;">
+   Disclaimer(NL):
+Hoehel is een parodiewebsite en is niet verbonden met, gesponsord door of gelieerd aan Google LLC.
+Alle handelsmerken, logo’s en merknamen zijn eigendom van hun respectieve eigenaars.
+Deze website is gratis, bevat geen advertenties en is niet bedoeld voor commercieel gebruik.
+
+Disclaimer (EN):
+Hoehel is a parody website and is not affiliated with, endorsed by, or associated with Google LLC.
+All trademarks, logos, and brand names are the property of their respective owners.
+This website is free, contains no advertisements, and is not intended for commercial use.
     </div>
   `;
   content.appendChild(inner);
