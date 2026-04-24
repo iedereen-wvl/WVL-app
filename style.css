@@ -364,11 +364,13 @@ html, body {
 }
 
 .info-share-btn {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   text-align: center;
   background: #333;
-  color: white;
+  color: #ccc;
   font-family: WVL, sans-serif;
   font-size: 16px;
   padding: 14px;
