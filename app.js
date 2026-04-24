@@ -983,8 +983,8 @@ function renderInstalleer() {
   inner.innerHTML = `
     <p class="info-section-title">Installeer deze app</p>
     <p class="info-body">
-      Je kan deze app gratis toevoegen aan je startscherm, net zoals een gewone app. 
-      Ze werkt dan ook zonder internet (voor de geluiden die al geladen zijn).
+      Je kan deze app gratis toevoegen aan je startscherm, net zoals een gewone app. <br>
+      Ze werkt dan ook zonder internet!
     </p>
 
     <hr class="info-divider">
@@ -1004,7 +1004,7 @@ function renderInstalleer() {
       </div>
       <div style="margin-bottom:10px;">
         <span style="background:#333; border-radius:50%; width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; margin-right:8px; font-weight:bold; color:white;">2</span>
-        Ga naar <b style="color:white;">iedereen-wvl.github.io/WVL-app</b>
+        Ga naar <a href="https://iedereen-wvl.github.io/WVL-app" target="_blank" style="color:#4a9eff;">iedereen-wvl.github.io/WVL-app</a>
       </div>
       <div style="margin-bottom:10px;">
         <span style="background:#333; border-radius:50%; width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; margin-right:8px; font-weight:bold; color:white;">3</span>
@@ -1018,7 +1018,7 @@ function renderInstalleer() {
       </div>
       <div style="margin-bottom:10px;">
         <span style="background:#333; border-radius:50%; width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; margin-right:8px; font-weight:bold; color:white;">4</span>
-        Scroll naar beneden en tik op <b style="color:white;">"Zet op beginscherm"</b>
+        Scroll iets naar beneden en tik op <b style="color:white;">"Zet op beginscherm"</b>
       </div>
       <div>
         <span style="background:#333; border-radius:50%; width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; margin-right:8px; font-weight:bold; color:white;">5</span>
@@ -1043,7 +1043,7 @@ function renderInstalleer() {
       </div>
       <div style="margin-bottom:10px;">
         <span style="background:#333; border-radius:50%; width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; margin-right:8px; font-weight:bold; color:white;">2</span>
-        Ga naar <b style="color:white;">iedereen-wvl.github.io/WVL-app</b>
+        Ga naar <a href="https://iedereen-wvl.github.io/WVL-app" target="_blank" style="color:#4a9eff;">iedereen-wvl.github.io/WVL-app</a>
       </div>
       <div style="margin-bottom:10px;">
         <span style="background:#333; border-radius:50%; width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; margin-right:8px; font-weight:bold; color:white;">3</span>
@@ -1060,33 +1060,6 @@ function renderInstalleer() {
     </div>
 
     <hr class="info-divider">
-
-    <p class="info-section-title" style="color:white;">Desktop (Windows / Mac)</p>
-
-    <div style="background:#1a1a1a; border-radius:10px; padding:16px; margin-bottom:20px; color:#ccc; font-size:14px; line-height:2;">
-      <div style="margin-bottom:10px;">
-        <span style="background:#333; border-radius:50%; width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; margin-right:8px; font-weight:bold; color:white;">1</span>
-        Open <b style="color:white;">Chrome of Edge</b>
-      </div>
-      <div style="margin-bottom:10px;">
-        <span style="background:#333; border-radius:50%; width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; margin-right:8px; font-weight:bold; color:white;">2</span>
-        Ga naar <b style="color:white;">iedereen-wvl.github.io/WVL-app</b>
-      </div>
-      <div style="margin-bottom:10px;">
-        <span style="background:#333; border-radius:50%; width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; margin-right:8px; font-weight:bold; color:white;">3</span>
-        Klik op het
-        <svg style="width:16px;height:16px;vertical-align:middle;margin:0 4px;" viewBox="0 0 24 24" fill="none" stroke="#4a9eff" stroke-width="2">
-          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-          <polyline points="7 10 12 15 17 10"/>
-          <line x1="12" y1="15" x2="12" y2="3"/>
-        </svg>
-        <b style="color:#4a9eff;">installeer</b>-icoontje rechts in de adresbalk
-      </div>
-      <div>
-        <span style="background:#333; border-radius:50%; width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; margin-right:8px; font-weight:bold; color:white;">4</span>
-        Klik op <b style="color:white;">"Installeren"</b> — klaar!
-      </div>
-    </div>
 
     <p style="color:#666; font-size:12px; text-align:center; margin-top:10px; margin-bottom:30px;">
       De app is gratis, bevat geen advertenties en gebruikt geen internet na de eerste keer laden.
