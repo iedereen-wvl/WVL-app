@@ -1,0 +1,16 @@
+{
+  "name": "Iedereen West-Vlaams",
+  "short_name": "Iedereen WVL",
+  "start_url": "/IedereenWVL/",
+  "scope": "/IedereenWVL/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#444444",
+  "icons": [
+    {
+      "src": "img/Icon.png",
+      "sizes": "1500x1500",
+      "type": "image/png"
+    }
+  ]
+}
