@@ -928,18 +928,19 @@ function renderInfo() {
 </a>
 
 <a href="https://vls.wikipedia.org/wiki/Iedereen_West-Vlaams" target="_blank" class="info-link" style="background:#333; border:1px solid #444; border-radius:10px; color:#ccc; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:10px; padding:14px; margin-bottom:12px;">
-  <img src="https://vls.wikipedia.org/static/images/icons/wikipedia.png" style="width:24px;height:24px;object-fit:contain;">
-  Wikipedia pagina
-</a>
+      <img src="https://vls.wikipedia.org/static/images/icons/wikipedia.png" style="width:24px;height:24px;object-fit:contain;">
+      Wikipedia pagina
+    </a>
+
+    <button class="info-share-btn" onclick="renderProblemen()">
+      <svg style="width:18px;height:18px;vertical-align:middle;margin-right:8px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="12" y1="8" x2="12" y2="12"/>
+        <line x1="12" y1="16" x2="12.01" y2="16"/>
+      </svg>
+      Problemen?
+    </button>
   `;
-  <button class="info-share-btn" onclick="renderProblemen()">
-  <svg style="width:18px;height:18px;vertical-align:middle;margin-right:8px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-    <circle cx="12" cy="12" r="10"/>
-    <line x1="12" y1="8" x2="12" y2="12"/>
-    <line x1="12" y1="16" x2="12.01" y2="16"/>
-  </svg>
-  Problemen?
-</button>
   
   content.appendChild(inner);
 
