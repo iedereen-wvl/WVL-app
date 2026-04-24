@@ -325,7 +325,7 @@ function renderHoehel() {
   inner.style.cssText = "display:flex; flex-direction:column; align-items:center; padding-top: 40px;";
   inner.innerHTML = `
     <div style="font-size:64px; font-weight:bold; margin-bottom:8px; letter-spacing:-2px; line-height:1;">
-      <span style="color:#4285F4">H</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">e</span><span style="color:#4285F4">h</span><span style="color:#34A853">e</span><span style="color:#EA4335">l</span><span style="color:white; font-size:32px; vertical-align:middle;">.be</span>
+      <span style="color:#4285F4">H</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">e</span><span style="color:#4285F4">h</span><span style="color:#34A853">e</span><span style="color:#EA4335">l</span><span style="color:white; font-size:32px;">.be</span>
     </div>
     <div style="color:#aaa; font-size:14px; margin-bottom:32px;">West-Vloander'n</div>
 
@@ -333,7 +333,7 @@ function renderHoehel() {
       <input 
         id="hoehel-input"
         type="text" 
-        placeholder="Zeg et eki wa daj moe weet'n..."
+        placeholder="Zeg eki wa daj moe weet'n..."
         style="flex:1; padding:12px 16px; border-radius:24px; border:1px solid #444; background:#1a1a1a; color:white; font-family:WVL,sans-serif; font-size:16px; outline:none;"
       >
     </div>
@@ -354,27 +354,29 @@ function renderHoehel() {
     </div>
 
     <div style="margin-top:24px; color:#555; font-size:11px; text-align:center; line-height:1.8; max-width:500px;">
-      &copy; Hoehel kiekt in stief vele pohina's in't Westvloms (meir of elvendertihoendertust-en-vuvenvihtig).<br>
+      &copy; Hoehel kiekt in stief vele pohina's in't Westvloms<br>
+      (meir of elvendertihoendertust-en-vuvenvihtig).<br>
       Dien pahina iere ku je tbest bekieken m&eacute; ruute ahtenegentich, moa nen aipet is wok hoed.
     </div>
-
+        <strong style="color:#555;"> Diskleemer:</strong><br>
     <div style="margin-top:8px; color:#555; font-size:11px; text-align:center; line-height:1.8; max-width:500px;">
-      Diskleemer: Dat is ier al nie te serieus eni. Hoehel is e woordspelinge vo de klucht ip de zoekmasjine van Google.
-      't Is ier ollemoale voe de leute, zonder commerce en met geslotn beuzn.
+     Dat is ier al nie te serieus eni. <br>
+     Hoehel is e woordspelinge vo de klucht ip de zoekmasjine van Google.<br>
+      't Is ier ollemoale voe de leute, zonder commerce en met geslotn beuzn.<br>
       Hoehel et niet te moakn met Google, 'tis 'thopn da ze der e bitje mee kun lach'n.
     </div>
 
     <div style="margin-top:80px; padding-top:24px; border-top:1px solid #222; color:#444; font-size:10px; text-align:center; line-height:1.8; max-width:500px; margin-bottom:20px;">
       <div style="margin-bottom:12px;">
         <strong style="color:#555;">Disclaimer (NL)</strong><br>
-        Hoehel is een parodiewebsite en is niet verbonden met, gesponsord door of gelieerd aan Google LLC.
-        Alle handelsmerken, logo's en merknamen zijn eigendom van hun respectieve eigenaars.
+        Hoehel is een parodiewebsite en is niet verbonden met, gesponsord door of gelieerd aan Google LLC.<br>
+        Alle handelsmerken, logo's en merknamen zijn eigendom van hun respectieve eigenaars.<br>
         Deze website is gratis, bevat geen advertenties en is niet bedoeld voor commercieel gebruik.
       </div>
       <div>
         <strong style="color:#555;">Disclaimer (EN)</strong><br>
-        Hoehel is a parody website and is not affiliated with, endorsed by, or associated with Google LLC.
-        All trademarks, logos, and brand names are the property of their respective owners.
+        Hoehel is a parody website and is not affiliated with, endorsed by, or associated with Google LLC.<br>
+        All trademarks, logos, and brand names are the property of their respective owners.<br>
         This website is free, contains no advertisements, and is not intended for commercial use.
       </div>
     </div>
