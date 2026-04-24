@@ -339,7 +339,7 @@ function renderHoehel() {
         id="hoehel-input"
         type="text" 
         placeholder="Zeg eki wa daj moe weet'n..."
-        style="flex:1; padding:12px 16px; border-radius:24px; border:1px solid #444; background:#1a1a1a; color:white; font-family:WVL,sans-serif; font-size:16px; outline:none;"
+        style="flex:1; padding:10px 12px; border-radius:24px; border:1px solid #444; background:#1a1a1a; color:white; font-family:WVL,sans-serif; font-size:clamp(13px, 3.5vw, 16px); outline:none; min-width:0;"
       >
     </div>
 
