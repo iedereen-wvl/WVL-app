@@ -932,6 +932,15 @@ function renderInfo() {
   Wikipedia pagina
 </a>
   `;
+  <button class="info-share-btn" onclick="renderProblemen()">
+  <svg style="width:18px;height:18px;vertical-align:middle;margin-right:8px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <circle cx="12" cy="12" r="10"/>
+    <line x1="12" y1="8" x2="12" y2="12"/>
+    <line x1="12" y1="16" x2="12.01" y2="16"/>
+  </svg>
+  Problemen?
+</button>
+  
   content.appendChild(inner);
 
   renderBottombar();
@@ -1064,6 +1073,71 @@ function renderInstalleer() {
     <p style="color:#666; font-size:12px; text-align:center; margin-top:10px; margin-bottom:30px;">
       De app is gratis, bevat geen advertenties en gebruikt geen internet na de eerste keer laden.
     </p>
+  `;
+  content.appendChild(inner);
+
+  renderBottombar();
+}
+function renderProblemen() {
+  activeTab = "info";
+  currentTheme = null;
+  document.getElementById("title").innerHTML = `
+    <div class="back" onclick="renderInfo()">&#8592; Terug</div>
+    <div class="title-text">PROBLEMEN?</div>
+  `;
+
+  const content = document.getElementById("content");
+  content.innerHTML = "";
+
+  const inner = document.createElement("div");
+  inner.className = "info-content";
+  inner.innerHTML = `
+    <p class="info-body">
+  Geluiden die niet afspelen, of iets ziet er raar uit?<br>
+  Geen paniek, volg de stappen hieronder.
+    </p>
+
+    <hr class="info-divider">
+
+<p class="info-section-title" style="color:white;">Windows / Mac</p>
+<div style="background:#1a1a1a; border-radius:10px; padding:16px; margin-bottom:20px; color:#ccc; font-size:14px; line-height:2;">
+  <div style="margin-bottom:10px;">
+    <span style="background:#333; border-radius:50%; width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; margin-right:8px; font-weight:bold; color:white;">1</span>
+    <b style="color:white;">Windows — Chrome / Edge / Brave:</b><br>
+    <span style="margin-left:32px;">Druk op <b style="color:white;">Ctrl + Shift + R</b></span>
+  </div>
+  <div style="margin-bottom:10px;">
+    <span style="background:#333; border-radius:50%; width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; margin-right:8px; font-weight:bold; color:white;">2</span>
+    <b style="color:white;">Mac — Chrome / Edge / Brave:</b><br>
+    <span style="margin-left:32px;">Druk op <b style="color:white;">Cmd + Shift + R</b></span>
+  </div>
+  <div>
+    <span style="background:#333; border-radius:50%; width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; margin-right:8px; font-weight:bold; color:white;">3</span>
+    <b style="color:white;">Mac — Safari:</b><br>
+    <span style="margin-left:32px;">Druk op <b style="color:white;">Cmd + Option + R</b></span><br>
+    <span style="margin-left:32px; color:#888; font-size:12px;">Of: Shift + klik op de herlaad knop in de adresbalk</span>
+  </div>
+</div>
+
+    <hr class="info-divider">
+
+    <p class="info-section-title" style="color:white;">iPhone &amp; Android</p>
+    <div style="background:#1a1a1a; border-radius:10px; padding:16px; margin-bottom:20px; color:#ccc; font-size:14px; line-height:2;">
+      <div>
+        <span style="background:#333; border-radius:50%; width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; margin-right:8px; font-weight:bold; color:white;">1</span>
+        Klik enkele seconden op het <b style="color:white;">"Iedereen West-Vlaams"</b> logo bovenaan het scherm
+      </div>
+      <div style="color:#888; font-size:12px; margin-left:32px; margin-top:4px;">
+        De app herlaadt dan automatisch
+      </div>
+    </div>
+
+    <hr class="info-divider">
+
+ <p class="info-body" style="color:#888; font-size:12px; text-align:center;">
+  Blijft het probleem zich voordoen? Probeer de app te verwijderen van je startscherm en opnieuw te installeren.
+  <span onclick="renderInstalleer()" style="color:#4a9eff; cursor:pointer;">Hoe installeer ik de app?</span>
+</p>
   `;
   content.appendChild(inner);
 
