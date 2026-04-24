@@ -1,6 +1,6 @@
 {
   "name": "Iedereen West-Vlaams",
-  "short_name": "WVL",
+  "short_name": "Iedereen WVL",
   "start_url": "/WVL-app/",
   "scope": "/WVL-app/",
   "display": "standalone",
