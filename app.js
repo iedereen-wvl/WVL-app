@@ -293,10 +293,12 @@ function renderBottombar() {
       ${hoehelSVG(activeTab === 'hoehel')}
       <span>Hoehel</span>
     </button>
-    <button class="bottombar-btn ${activeTab === 'wiki' ? 'active' : ''}" onclick="renderWiki()">
-      ${wikiSVG(activeTab === 'wiki')}
-      <span>Wikipedia</span>
-    </button>
+<button class="bottombar-btn ${activeTab === 'wiki' ? 'active' : ''}" onclick="renderWiki()">
+  <img src="https://vls.wikipedia.org/static/images/icons/wikipedia.png" 
+    style="width:28px; height:28px; object-fit:contain; ${activeTab === 'wiki' ? 'opacity:1' : 'opacity:0.5'};" 
+    alt="Wikipedia">
+  <span>Wikipedia</span>
+</button>
     <button class="bottombar-btn ${activeTab === 'info' ? 'active' : ''}" onclick="renderInfo()">
       <img src="img/logo_wvl@2x.png" class="tab-logo" alt="Info">
       <span>Info</span>
@@ -436,28 +438,87 @@ function renderWiki() {
 
   const inner = document.createElement("div");
   inner.className = "info-content";
-  inner.style.cssText = "display:flex; flex-direction:column; align-items:center; padding-top:40px;";
+  inner.style.cssText = "display:flex; flex-direction:column; align-items:center; padding-top:30px;";
   inner.innerHTML = `
-    <div style="font-size:48px; font-weight:bold; margin-bottom:4px; letter-spacing:-1px; color:white;">
-      Wikipedia
-    </div>
-    <div style="color:#aaa; font-size:14px; margin-bottom:32px;">int Westvloams</div>
+    <img src="https://vls.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-vls.svg" 
+      style="max-width:280px; width:80%; margin-bottom:28px;" alt="Wikipedia West-Vlams">
 
     <div style="width:100%; max-width:500px; margin-bottom:16px;">
-      <input
-        id="wiki-input"
-        type="text"
-        placeholder="Zoek'n ip Westvloamse Wikipedia..."
-        style="width:100%; padding:12px 16px; border-radius:24px; border:1px solid #444; background:#1a1a1a; color:white; font-family:WVL,sans-serif; font-size:16px; outline:none; box-sizing:border-box;"
-      >
+      <div style="display:flex; align-items:center; border:1px solid #555; border-radius:4px; background:#1a1a1a; overflow:hidden;">
+        <span style="padding:0 12px; color:#888; font-size:18px;">&#128269;</span>
+        <input
+          id="wiki-input"
+          type="text"
+          placeholder="Deurzoek Wikipedia"
+          style="flex:1; padding:12px 8px; border:none; background:transparent; color:white; font-family:WVL,sans-serif; font-size:16px; outline:none;"
+        >
+        <button onclick="wikiZoeken()" style="padding:10px 16px; border:none; border-left:1px solid #555; background:#2a2a2a; color:#ccc; font-family:WVL,sans-serif; font-size:14px; cursor:pointer; white-space:nowrap;">
+          Zoekn
+        </button>
+      </div>
     </div>
 
-    <button onclick="wikiZoeken()" style="padding:10px 20px; border-radius:6px; border:1px solid #444; background:#222; color:#ccc; font-family:WVL,sans-serif; font-size:14px; cursor:pointer; width:100%; max-width:500px; margin-bottom:10px;">
-      &#128213; Zoek'n ip Westvloamse Wikipedia
-    </button>
-    <a href="https://vls.wikipedia.org/wiki/Voorblad" target="_blank" style="display:block; text-align:center; color:#4a9eff; font-size:13px; padding:10px;">
+    <a href="https://vls.wikipedia.org/wiki/Voorblad" target="_blank" 
+      style="display:block; text-align:center; color:#4a9eff; font-size:13px; padding:8px 0; margin-bottom:24px;">
       Naor de voorpagina
     </a>
+
+    <div style="width:100%; max-width:500px; border-top:1px solid #222; padding-top:20px; color:#ccc; font-size:14px; line-height:1.9; text-align:center;">
+      <big><b>Welgekommn by de <a href="https://vls.wikipedia.org/wiki/West-Vlams" target="_blank" style="color:#4a9eff;">West-Vlamsche</a> Wikipedia!</b></big>
+    </div>
+
+    <div style="width:100%; max-width:500px; color:#aaa; font-size:13px; line-height:1.9; text-align:center; margin-top:12px;">
+      Der zyn ol <a href="https://vls.wikipedia.org/wiki/Specioal:Statistieken" target="_blank" style="color:#4a9eff;">8.334 artikels</a> ip de West-Vlamsche Wikipedia. 
+      Olleman meugt hêlegans vo nietn informoasje ipzoekn, toevoegn of zelve bewerkn. 
+      Ge moe gy gin benauwd èn vo'n twadde te verandern of derby te zettn. 
+      A je der nog nie hêel grust ip zyt, ku je gy olsan e kêe probeern in de 
+      <a href="https://vls.wikipedia.org/wiki/Wikipedia:Zanbak" target="_blank" style="color:#4a9eff;">zandbak</a>.
+    </div>
+
+    <div style="width:100%; max-width:500px; color:#aaa; font-size:13px; line-height:1.9; text-align:center; margin-top:12px;">
+      <a href="https://vls.wikipedia.org/wiki/Wikipedia:Gebruuk_van_streektoaln" target="_blank" style="color:#4a9eff;">'k Ei der gin gedacht van oe da 'k ik in 't West-Vlams kanne begunn schryvn.</a><br>
+      <a href="https://vls.wikipedia.org/wiki/Ulpe:Wikipedia" target="_blank" style="color:#4a9eff;">Oe moe 'k ik eigentlik begunn?</a>
+    </div>
+
+    <div style="margin-top:40px; width:100%; max-width:500px; border-top:1px solid #222; padding-top:20px; color:#666; font-size:12px; text-align:center; line-height:2;">
+      Da is ier e versie van Wikipedia int: <a href="https://vls.wikipedia.org/wiki/Voorblad" target="_blank" style="color:#4a9eff;">Westvloams</a>
+    </div>
+
+    <div style="margin-top:8px; color:#666; font-size:12px; text-align:center; line-height:2; max-width:500px;">
+      Wikipedia wok in:
+      <a href="https://en.wikipedia.org" target="_blank" style="color:#4a9eff;">'t Engels</a> &middot;
+      <a href="https://fr.wikipedia.org" target="_blank" style="color:#4a9eff;">'t Frans</a> &middot;
+      <a href="https://de.wikipedia.org" target="_blank" style="color:#4a9eff;">'t Duts</a> &middot;
+      <a href="https://nl.wikipedia.org" target="_blank" style="color:#4a9eff;">'Vo d'Hollanders</a>
+    </div>
+
+    <div style="margin-top:24px; color:#555; font-size:11px; text-align:center; line-height:1.8; max-width:500px;">
+      &copy; Wikipedia is e vrye encyclopedie da iedereen ku bewerkn.<br>
+      Dien pahina iere ku je tbest bekieken m&eacute; ruute ahtenegentich, moa nen aipet is wok hoed.
+    </div>
+
+    <strong style="color:#555; margin-top:24px; margin-bottom:4px; display:block; text-align:center;">Diskleemer:</strong>
+    <div style="margin-top:4px; color:#555; font-size:11px; text-align:center; line-height:1.8; max-width:500px;">
+      Dat is ier al nie te serieus eni.<br>
+      Dezen pagina is e liefdevolle ode an de West-Vlamsche Wikipedia.<br>
+      't Is ier ollemoale voe de leute, zonder commerce en met geslotn beuzn.<br>
+      Dezen pagina et niet te moakn met de Wikimedia Foundation.
+    </div>
+
+    <div style="margin-top:80px; padding-top:24px; border-top:1px solid #222; color:#444; font-size:10px; text-align:center; line-height:1.8; max-width:500px; margin-bottom:20px;">
+      <div style="margin-bottom:12px;">
+        <strong style="color:#555;">Disclaimer (NL)</strong><br>
+        Deze pagina is niet verbonden met, gesponsord door of gelieerd aan de Wikimedia Foundation.<br>
+        Alle handelsmerken, logo's en merknamen zijn eigendom van hun respectieve eigenaars.<br>
+        Deze pagina is gratis, bevat geen advertenties en is niet bedoeld voor commercieel gebruik.
+      </div>
+      <div>
+        <strong style="color:#555;">Disclaimer (EN)</strong><br>
+        This page is not affiliated with, endorsed by, or associated with the Wikimedia Foundation.<br>
+        All trademarks, logos, and brand names are the property of their respective owners.<br>
+        This page is free, contains no advertisements, and is not intended for commercial use.
+      </div>
+    </div>
   `;
   content.appendChild(inner);
 
