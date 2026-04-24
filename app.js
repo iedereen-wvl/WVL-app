@@ -289,6 +289,10 @@ function renderBottombar() {
       ${quizSVG(quizMode)}
       <span>Quiz</span>
     </button>
+    <button class="bottombar-btn ${activeTab === 'hoehel' ? 'active' : ''}" onclick="renderHoehel()">
+      ${hoehelSVG(activeTab === 'hoehel')}
+      <span>Hoehel</span>
+    </button>
     <button class="bottombar-btn ${activeTab === 'info' ? 'active' : ''}" onclick="renderInfo()">
       <img src="img/logo_wvl@2x.png" class="tab-logo" alt="Info">
       <span>Info</span>
@@ -296,6 +300,123 @@ function renderBottombar() {
   `;
 }
 
+function hoehelSVG(active) {
+  // G-vorm in Google kleuren
+  return `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M28 16.5c0-.8-.1-1.6-.2-2.3H16v4.4h6.7c-.3 1.5-1.1 2.7-2.4 3.6v3h3.9C26.6 23 28 20 28 16.5z" fill="${active ? '#4285F4' : '#666'}"/>
+    <path d="M16 28c3.2 0 5.9-1.1 7.9-2.9l-3.9-3c-1.1.7-2.4 1.2-4 1.2-3.1 0-5.7-2.1-6.6-4.8H5.4v3.1C7.4 25.8 11.4 28 16 28z" fill="${active ? '#34A853' : '#666'}"/>
+    <path d="M9.4 18.5c-.2-.7-.4-1.4-.4-2.2s.1-1.5.4-2.2v-3H5.4C4.5 12.8 4 14.3 4 16s.5 3.2 1.4 4.6l4-3.1z" fill="${active ? '#FBBC05' : '#666'}"/>
+    <path d="M16 9.2c1.7 0 3.3.6 4.5 1.8l3.4-3.4C21.9 5.7 19.2 4.5 16 4.5c-4.6 0-8.6 2.6-10.6 6.4l4 3.1C10.3 11.3 12.9 9.2 16 9.2z" fill="${active ? '#EA4335' : '#666'}"/>
+  </svg>`;
+}
+function renderHoehel() {
+  activeTab = "hoehel";
+  currentTheme = null;
+  document.getElementById("title").innerHTML = `
+    <div class="back" onclick="renderThemes()">&#8592; Terug</div>
+    <div class="title-text">HOEHEL</div>
+  `;
+
+  const content = document.getElementById("content");
+  content.innerHTML = "";
+
+  const inner = document.createElement("div");
+  inner.className = "info-content";
+  inner.style.cssText = "display:flex; flex-direction:column; align-items:center; padding-top: 40px;";
+  inner.innerHTML = `
+    <div style="font-size:64px; font-weight:bold; margin-bottom:8px; letter-spacing:-2px;">
+      <span style="color:#4285F4">H</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">e</span><span style="color:#4285F4">h</span><span style="color:#34A853">e</span><span style="color:#EA4335">l</span>
+    </div>
+    <div style="color:#aaa; font-size:14px; margin-bottom:32px;">West-Vloander'n</div>
+    <div style="width:100%; max-width:500px; display:flex; gap:8px; margin-bottom:24px;">
+      <input 
+        id="hoehel-input"
+        type="text" 
+        placeholder="Hoehel zoek'n..."
+        style="
+          flex:1;
+          padding: 12px 16px;
+          border-radius: 24px;
+          border: 1px solid #444;
+          background: #1a1a1a;
+          color: white;
+          font-family: WVL, sans-serif;
+          font-size: 16px;
+          outline: none;
+        "
+      >
+      <button onclick="hoehelZoeken()" style="
+        padding: 12px 20px;
+        border-radius: 24px;
+        border: none;
+        background: #333;
+        color: white;
+        font-family: WVL, sans-serif;
+        font-size: 14px;
+        cursor: pointer;
+        white-space: nowrap;
+      ">Zoek'n</button>
+    </div>
+    <button onclick="hoehelZoeken()" style="
+      padding: 10px 20px;
+      border-radius: 6px;
+      border: 1px solid #444;
+      background: #222;
+      color: #ccc;
+      font-family: WVL, sans-serif;
+      font-size: 14px;
+      cursor: pointer;
+      margin-bottom: 10px;
+      width: 100%;
+      max-width: 500px;
+    ">Hoehel zoek'n</button>
+    <button onclick="hoehelKhonSjans()" style="
+      padding: 10px 20px;
+      border-radius: 6px;
+      border: 1px solid #444;
+      background: #222;
+      color: #ccc;
+      font-family: WVL, sans-serif;
+      font-size: 14px;
+      cursor: pointer;
+      width: 100%;
+      max-width: 500px;
+    ">K'hon sjans \u00e8n</button>
+    <div style="margin-top:30px; color:#666; font-size:12px; text-align:center;">
+      Hoehel wok in: 
+      <a href="https://hoehel.be" target="_blank" style="color:#4a9eff;">Westvloams</a> &nbsp;
+      <a href="https://google.be" target="_blank" style="color:#4a9eff;">Google.be</a>
+    </div>
+  `;
+  content.appendChild(inner);
+
+  // Enter toets werkt ook
+  setTimeout(() => {
+    const input = document.getElementById("hoehel-input");
+    if (input) {
+      input.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") hoehelZoeken();
+      });
+      input.focus();
+    }
+  }, 100);
+
+  renderBottombar();
+}
+
+function hoehelZoeken() {
+  const query = document.getElementById("hoehel-input")?.value?.trim();
+  if (!query) return;
+  window.open(`https://www.google.be/search?q=${encodeURIComponent(query)}`, "_blank");
+}
+
+function hoehelKhonSjans() {
+  const query = document.getElementById("hoehel-input")?.value?.trim();
+  const url = query
+    ? `https://www.google.be/search?q=${encodeURIComponent(query)}&btnI=1`
+    : "https://hoehel.be";
+  window.open(url, "_blank");
+}
 // =======================
 // POPUP
 // =======================
