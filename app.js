@@ -343,14 +343,13 @@ function renderHoehel() {
       >
     </div>
 
-    <button onclick="hoehelZoeken()" style="padding:10px 20px; border-radius:6px; border:1px solid #444; background:#222; color:#f3f3f3; font-family:WVL,sans-serif; font-size:14px; cursor:pointer; margin-bottom:10px; width:100%; max-width:500px;">Zoek'n me Hoehel</button>
-    <button onclick="hoehelKhonSjans()" style="padding:10px 20px; border-radius:6px; border:1px solid #444; background:#222; color:#f3f3f3; font-family:WVL,sans-serif; font-size:14px; cursor:pointer; width:100%; max-width:500px;">Ip goe heluk</button>
-
-    <div style="margin-top:24px; color:#666; font-size:12px; text-align:center; line-height:2;">
+   <button onclick="hoehelZoeken()" style="padding:10px 20px; border-radius:6px; border:1px solid #444; background:#f4f4f4; color:#444444; font-family:WVL,sans-serif; font-size:14px; cursor:pointer; margin-bottom:10px; width:100%; max-width:500px;">Zoek'n me Hoehel</button>
+<button onclick="hoehelKhonSjans()" style="padding:10px 20px; border-radius:6px; border:1px solid #444; background:#f4f4f4; color:#444444; font-family:WVL,sans-serif; font-size:14px; cursor:pointer; width:100%; max-width:500px;">Ip goe heluk</button>
+    <div style="margin-top:24px; color:#aaa; font-size:12px; text-align:center; line-height:2;">
       Da is ier e versie van Hoehel int: <a href="https://hoehel.be" target="_blank" style="color:#4a9eff;">Westvloams</a>
     </div>
 
-    <div style="margin-top:8px; color:#666; font-size:12px; text-align:center; line-height:2;">
+    <div style="margin-top:8px; color:#aaa; font-size:12px; text-align:center; line-height:2;">
       Origineel eje hoehel wok in:
       <a href="https://www.google.com/?hl=en" target="_blank" style="color:#4a9eff;">'t Engels</a> &middot;
       <a href="https://www.google.com/?hl=fr" target="_blank" style="color:#4a9eff;">'t Frans</a> &middot;
@@ -358,13 +357,13 @@ function renderHoehel() {
       <a href="https://www.google.be" target="_blank" style="color:#4a9eff;">'Vo d'Hollanders</a>
     </div>
 
-    <div style="margin-top:24px; color:#555; font-size:11px; text-align:center; line-height:1.8; max-width:500px;">
+    <div style="margin-top:24px; color:#ccc; font-size:11px; text-align:center; line-height:1.8; max-width:500px;">
   &copy; Hoehel kiekt in stief vele pohina's in't Westvloms<br>
   (meir of elvendertihoendertust-en-vuvenvihtig).<br>
   Dien pahina iere ku je tbest bekieken m&eacute; ruute ahtenegentich, moa nen aipet is wok hoed.
 </div>
-<strong style="color:#555; margin-top:32px; margin-bottom:4px; display:block; text-align:center;">Diskleemer:</strong>
-<div style="margin-top:4px; color:#555; font-size:11px; text-align:center; line-height:1.8; max-width:500px;">
+<strong style="color:#ccc; margin-top:32px; margin-bottom:4px; display:block; text-align:center;">Diskleemer:</strong>
+<div style="margin-top:4px; color:#ccc; font-size:11px; text-align:center; line-height:1.8; max-width:500px;">
   Dat is ier al nie te serieus eni.<br>
   Hoehel is e woordspelinge vo de klucht ip de zoekmasjine van Google.<br>
   't Is ier ollemoale voe de leute, zonder commerce en met geslotn beuzn.<br>
@@ -373,13 +372,13 @@ function renderHoehel() {
 
     <div style="margin-top:80px; padding-top:24px; border-top:1px solid #222; color:#444; font-size:10px; text-align:center; line-height:1.8; max-width:500px; margin-bottom:20px;">
       <div style="margin-bottom:12px;">
-        <strong style="color:#555;">Disclaimer (NL)</strong><br>
+        <strong style="color:#ccc;">Disclaimer (NL)</strong><br>
         Hoehel is een parodiewebsite en is niet verbonden met, gesponsord door of gelieerd aan Google LLC.<br>
         Alle handelsmerken, logo's en merknamen zijn eigendom van hun respectieve eigenaars.<br>
         Deze website is gratis, bevat geen advertenties en is niet bedoeld voor commercieel gebruik.
       </div>
       <div>
-        <strong style="color:#555;">Disclaimer (EN)</strong><br>
+        <strong style="color:#ccc;">Disclaimer (EN)</strong><br>
         Hoehel is a parody website and is not affiliated with, endorsed by, or associated with Google LLC.<br>
         All trademarks, logos, and brand names are the property of their respective owners.<br>
         This website is free, contains no advertisements, and is not intended for commercial use.
@@ -491,11 +490,11 @@ function renderWiki() {
       <a href="https://vls.wikipedia.org/wiki/Ulpe:Wikipedia" target="_blank" style="color:#4a9eff;">Oe moe 'k ik eigentlik begunn?</a>
     </div>
 
-    <div style="margin-top:40px; width:100%; max-width:500px; border-top:1px solid #222; padding-top:20px; color:#666; font-size:12px; text-align:center; line-height:2;">
+    <div style="margin-top:40px; width:100%; max-width:500px; border-top:1px solid #222; padding-top:20px; color:#aaa; font-size:12px; text-align:center; line-height:2;">
       Da is ier e versie van Wikipedia int: <a href="https://vls.wikipedia.org/wiki/Voorblad" target="_blank" style="color:#4a9eff;">Westvloams</a>
     </div>
 
-    <div style="margin-top:8px; color:#666; font-size:12px; text-align:center; line-height:2; max-width:500px;">
+    <div style="margin-top:8px; color:#aaa; font-size:12px; text-align:center; line-height:2; max-width:500px;">
       Wikipedia ej natuurlik wok in:
       <a href="https://en.wikipedia.org" target="_blank" style="color:#4a9eff;">'t Engels</a> &middot;
       <a href="https://fr.wikipedia.org" target="_blank" style="color:#4a9eff;">'t Frans</a> &middot;
@@ -503,13 +502,13 @@ function renderWiki() {
       <a href="https://nl.wikipedia.org" target="_blank" style="color:#4a9eff;">'Vo d'Hollanders</a>
     </div>
 
-    <div style="margin-top:24px; color:#555; font-size:11px; text-align:center; line-height:1.8; max-width:500px;">
+    <div style="margin-top:24px; color:#ccc; font-size:11px; text-align:center; line-height:1.8; max-width:500px;">
       &copy; Wikipedia is e vrye encyclopedie da iedereen ku bewerkn.<br>
       Dien pahina iere ku je tbest bekieken m&eacute; ruute ahtenegentich, moa nen aipet is wok hoed.
     </div>
 
-    <strong style="color:#555; margin-top:24px; margin-bottom:4px; display:block; text-align:center;">Diskleemer:</strong>
-    <div style="margin-top:4px; color:#555; font-size:11px; text-align:center; line-height:1.8; max-width:500px;">
+    <strong style="color:#ccc; margin-top:24px; margin-bottom:4px; display:block; text-align:center;">Diskleemer:</strong>
+    <div style="margin-top:4px; color:#ccc; font-size:11px; text-align:center; line-height:1.8; max-width:500px;">
       Dat is ier al nie te serieus eni.<br>
       Dezen pagina is e liefdevolle ode an de West-Vlamsche Wikipedia.<br>
       't Is ier ollemoale voe de leute, zonder commerce en met geslotn beuzn.<br>
@@ -518,13 +517,13 @@ function renderWiki() {
 
     <div style="margin-top:80px; padding-top:24px; border-top:1px solid #222; color:#444; font-size:10px; text-align:center; line-height:1.8; max-width:500px; margin-bottom:20px;">
       <div style="margin-bottom:12px;">
-        <strong style="color:#555;">Disclaimer (NL)</strong><br>
+        <strong style="color:#ccc;">Disclaimer (NL)</strong><br>
         Deze pagina is niet verbonden met, gesponsord door of gelieerd aan de Wikimedia Foundation.<br>
         Alle handelsmerken, logo's en merknamen zijn eigendom van hun respectieve eigenaars.<br>
         Deze pagina is gratis, bevat geen advertenties en is niet bedoeld voor commercieel gebruik.
       </div>
       <div>
-        <strong style="color:#555;">Disclaimer (EN)</strong><br>
+        <strong style="color:#ccc;">Disclaimer (EN)</strong><br>
         This page is not affiliated with, endorsed by, or associated with the Wikimedia Foundation.<br>
         All trademarks, logos, and brand names are the property of their respective owners.<br>
         This page is free, contains no advertisements, and is not intended for commercial use.
