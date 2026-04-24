@@ -343,8 +343,8 @@ function renderHoehel() {
       >
     </div>
 
-    <button onclick="hoehelZoeken()" style="padding:10px 20px; border-radius:6px; border:1px solid #444; background:#222; color:#ccc; font-family:WVL,sans-serif; font-size:14px; cursor:pointer; margin-bottom:10px; width:100%; max-width:500px;">Zoek'n me Hoehel</button>
-    <button onclick="hoehelKhonSjans()" style="padding:10px 20px; border-radius:6px; border:1px solid #444; background:#222; color:#ccc; font-family:WVL,sans-serif; font-size:14px; cursor:pointer; width:100%; max-width:500px;">Ip goe heluk</button>
+    <button onclick="hoehelZoeken()" style="padding:10px 20px; border-radius:6px; border:1px solid #444; background:#222; color:#f3f3f3; font-family:WVL,sans-serif; font-size:14px; cursor:pointer; margin-bottom:10px; width:100%; max-width:500px;">Zoek'n me Hoehel</button>
+    <button onclick="hoehelKhonSjans()" style="padding:10px 20px; border-radius:6px; border:1px solid #444; background:#222; color:#f3f3f3; font-family:WVL,sans-serif; font-size:14px; cursor:pointer; width:100%; max-width:500px;">Ip goe heluk</button>
 
     <div style="margin-top:24px; color:#666; font-size:12px; text-align:center; line-height:2;">
       Da is ier e versie van Hoehel int: <a href="https://hoehel.be" target="_blank" style="color:#4a9eff;">Westvloams</a>
@@ -479,9 +479,9 @@ function renderWiki() {
     </div>
 
     <div style="width:100%; max-width:500px; color:#aaa; font-size:13px; line-height:1.9; text-align:center; margin-top:12px;">
-      Der zyn ol <a href="https://vls.wikipedia.org/wiki/Specioal:Statistieken" target="_blank" style="color:#4a9eff;">8.334 artikels</a> ip de West-Vlamsche Wikipedia. 
+      Der zyn ol <a href="https://vls.wikipedia.org/wiki/Specioal:Statistieken" target="_blank" style="color:#4a9eff;">8.334 artikels</a> ip de West-Vlamsche Wikipedia.<br> 
       Olleman meugt hêlegans vo nietn informoasje ipzoekn, toevoegn of zelve bewerkn. 
-      Ge moe gy gin benauwd èn vo'n twadde te verandern of derby te zettn. 
+      Ge moe gy gin benauwd èn vo'n twadde te verandern of derby te zettn. <br>
       A je der nog nie hêel grust ip zyt, ku je gy olsan e kêe probeern in de 
       <a href="https://vls.wikipedia.org/wiki/Wikipedia:Zanbak" target="_blank" style="color:#4a9eff;">zandbak</a>.
     </div>
@@ -496,7 +496,7 @@ function renderWiki() {
     </div>
 
     <div style="margin-top:8px; color:#666; font-size:12px; text-align:center; line-height:2; max-width:500px;">
-      Wikipedia wok in:
+      Wikipedia ej natuurlik wok in:
       <a href="https://en.wikipedia.org" target="_blank" style="color:#4a9eff;">'t Engels</a> &middot;
       <a href="https://fr.wikipedia.org" target="_blank" style="color:#4a9eff;">'t Frans</a> &middot;
       <a href="https://de.wikipedia.org" target="_blank" style="color:#4a9eff;">'t Duts</a> &middot;
