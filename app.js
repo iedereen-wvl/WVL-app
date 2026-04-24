@@ -595,6 +595,13 @@ function renderInfo() {
     <p class="info-section-title">Over de app</p>
     <p class="info-intro">Verras vriend en vijand met de leukste West-Vlaamse woorden en uitspraken.</p>
     <p class="info-body">Voor elke situatie en bij elke gelegenheid kan je vanaf nu uitpakken met een perfecte West-Vlaamse tongval. Onderweg, op caf\u00e9 of restaurant, in de winkel, ...</p>
+     <hr class="info-divider">
+    <p class="info-section-title">Info over deze versie</p>
+    <p class="info-intro">Dit is een nagemaakte webpagina van de originele app.</p>
+    <p class="info-body">De originele app is niet meer beschikbaar op de Google Play Store of de Apple App Store. Deze site werd nagemaakt op basis van een oude versie van de app, met alle audiofiles. Zelf voegde ik er nog wat andere functionaliteiten aan toe zoals de quiz en het zichtbaar maken van de West-Vlaamse geschreven versie.</p>
+    <p class="info-body">Alle credits behoren toe aan de originele makers van de West-Vlaanderen app, dit werd enkel gemaakt ter preservatie van onze taal!</p>
+    <p class="info-body">Deel dit met je vrienden!</p>
+        <p class="info-body">Made by Jasmine Menu.</p>
     <hr class="info-divider">
     <a href="https://vls.wikipedia.org/wiki/Iedereen_West-Vlaams" target="_blank" class="info-link">
       &#128216; Wikipedia pagina
