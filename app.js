@@ -293,13 +293,16 @@ function renderBottombar() {
       ${hoehelSVG(activeTab === 'hoehel')}
       <span>Hoehel</span>
     </button>
+    <button class="bottombar-btn ${activeTab === 'wiki' ? 'active' : ''}" onclick="renderWiki()">
+      ${wikiSVG(activeTab === 'wiki')}
+      <span>Wikipedia</span>
+    </button>
     <button class="bottombar-btn ${activeTab === 'info' ? 'active' : ''}" onclick="renderInfo()">
       <img src="img/logo_wvl@2x.png" class="tab-logo" alt="Info">
       <span>Info</span>
     </button>
   `;
 }
-
 function hoehelSVG(active) {
   // G-vorm in Google kleuren
   return `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -408,6 +411,78 @@ function hoehelKhonSjans() {
     : "https://hoehel.be";
   window.open(url, "_blank");
 }
+
+function wikiSVG(active) {
+  const c = active ? "white" : "#888";
+  return `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="16" cy="16" r="12" stroke="${c}" stroke-width="1.8"/>
+    <path d="M4 16 Q10 10 16 16 Q22 22 28 16" stroke="${c}" stroke-width="1.5"/>
+    <path d="M4 16 Q10 22 16 16 Q22 10 28 16" stroke="${c}" stroke-width="1.5"/>
+    <line x1="16" y1="4" x2="16" y2="28" stroke="${c}" stroke-width="1.5"/>
+    <line x1="4" y1="16" x2="28" y2="16" stroke="${c}" stroke-width="1.5"/>
+  </svg>`;
+}
+
+function renderWiki() {
+  activeTab = "wiki";
+  currentTheme = null;
+  document.getElementById("title").innerHTML = `
+    <div class="back" onclick="renderThemes()">&#8592; Terug</div>
+    <div class="title-text">WIKIPEDIA</div>
+  `;
+
+  const content = document.getElementById("content");
+  content.innerHTML = "";
+
+  const inner = document.createElement("div");
+  inner.className = "info-content";
+  inner.style.cssText = "display:flex; flex-direction:column; align-items:center; padding-top:40px;";
+  inner.innerHTML = `
+    <div style="font-size:48px; font-weight:bold; margin-bottom:4px; letter-spacing:-1px; color:white;">
+      Wikipedia
+    </div>
+    <div style="color:#aaa; font-size:14px; margin-bottom:32px;">int Westvloams</div>
+
+    <div style="width:100%; max-width:500px; margin-bottom:16px;">
+      <input
+        id="wiki-input"
+        type="text"
+        placeholder="Zoek'n ip Westvloamse Wikipedia..."
+        style="width:100%; padding:12px 16px; border-radius:24px; border:1px solid #444; background:#1a1a1a; color:white; font-family:WVL,sans-serif; font-size:16px; outline:none; box-sizing:border-box;"
+      >
+    </div>
+
+    <button onclick="wikiZoeken()" style="padding:10px 20px; border-radius:6px; border:1px solid #444; background:#222; color:#ccc; font-family:WVL,sans-serif; font-size:14px; cursor:pointer; width:100%; max-width:500px; margin-bottom:10px;">
+      &#128213; Zoek'n ip Westvloamse Wikipedia
+    </button>
+    <a href="https://vls.wikipedia.org/wiki/Voorblad" target="_blank" style="display:block; text-align:center; color:#4a9eff; font-size:13px; padding:10px;">
+      Naor de voorpagina
+    </a>
+  `;
+  content.appendChild(inner);
+
+  setTimeout(() => {
+    const input = document.getElementById("wiki-input");
+    if (input) {
+      input.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") wikiZoeken();
+      });
+      input.focus();
+    }
+  }, 100);
+
+  renderBottombar();
+}
+
+function wikiZoeken() {
+  const query = document.getElementById("wiki-input")?.value?.trim();
+  if (!query) {
+    window.open("https://vls.wikipedia.org/wiki/Voorblad", "_blank");
+    return;
+  }
+  window.open(`https://vls.wikipedia.org/wiki/Specioal:Zoeken?search=${encodeURIComponent(query)}`, "_blank");
+}
+
 // =======================
 // POPUP
 // =======================
