@@ -459,13 +459,15 @@ function renderWiki() {
     </a>
 
     <div style="width:100%; max-width:500px; margin-bottom:16px;">
-      <div style="display:flex; align-items:center; border:1px solid #555; border-radius:4px; background:#1a1a1a; overflow:hidden;">
-        <input
-          id="wiki-input"
-          type="text"
-          placeholder="Deurzoek Wikipedia"
-          style="flex:1; padding:12px 14px; border:none; background:transparent; color:white; font-family:WVL,sans-serif; font-size:16px; outline:none;"
-        >
+<div style="display:flex; align-items:center; border:1px solid #555; border-radius:4px; background:#1a1a1a; overflow:hidden; width:100%; box-sizing:border-box;">        
+
+<input
+  id="wiki-input"
+  type="text"
+  placeholder="Deurzoek Wikipedia"
+  style="flex:1; min-width:0; padding:12px 14px; border:none; background:transparent; color:white; font-family:WVL,sans-serif; font-size:clamp(13px, 3.5vw, 16px); outline:none;"
+>
+
         <button onclick="wikiZoeken()" style="padding:12px 16px; border:none; border-left:1px solid #555; background:#f8f9fa; color:#333; font-family:WVL,sans-serif; font-size:14px; cursor:pointer; white-space:nowrap;">
           Zoekn
         </button>
