@@ -984,6 +984,16 @@ window.addEventListener("DOMContentLoaded", () => {
       renderThemes();
       const allFiles = [...new Set(sounds.map(s => cleanPath(s.fileName)))];
       preloadAll(allFiles);
+
+      // Lang indrukken op logo = herladen
+      let pressTimer;
+      const subbar = document.querySelector(".subbar");
+      subbar.addEventListener("touchstart", () => {
+        pressTimer = setTimeout(() => location.reload(), 1500);
+      });
+      subbar.addEventListener("touchend", () => clearTimeout(pressTimer));
+      subbar.addEventListener("touchmove", () => clearTimeout(pressTimer));
+
     }, 400);
   });
 });
