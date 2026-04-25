@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://iedereen-wvl.github.io/WVL-app/sitemap.xml
