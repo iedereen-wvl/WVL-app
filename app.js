@@ -57,6 +57,7 @@ const CATEGORY_MAP = {
   "oostende":       "Oostende",
   "ieper":          "Ieper",
   "poperinge":          "Poperinge",
+  "poplied":        "Poperingse liedjes",
   "kortrijk":       "Kortrijk",
   "brugge":         "Brugge",
   "roeselare":      "Roeselare",
@@ -643,7 +644,7 @@ async function loadSounds() {
 // =======================
 function buildData() {
   data = {};
-  [...THEME_ORDER, ...REGIO_THEMES].forEach(t => { data[t] = []; });
+  [...THEME_ORDER, ...REGIO_THEMES, "Poperingse liedjes"]].forEach(t => { data[t] = []; });
 
   sounds.forEach(s => {
     const file = cleanPath(s.fileName);
@@ -815,6 +816,16 @@ function renderTheme(theme) {
   const inner = document.createElement("div");
   inner.id = "content-inner";
   content.appendChild(inner);
+
+  // Extra subcategorie knop voor Poperinge
+  if (theme === "Poperinge" && data["Poperingse liedjes"] && data["Poperingse liedjes"].length > 0) {
+    const div = document.createElement("div");
+    div.className = "item";
+    div.style.cssText = "background:#1a1a1a; border-bottom: 1px solid #444;";
+    div.innerHTML = `<span class="label" style="color:#f0a500;">&#9835; Poperingse liedjes</span><span class="arrow">&#10142;</span>`;
+    div.onclick = () => renderPoperingeLiedjes();
+    inner.appendChild(div);
+  }
 
   (data[theme] || []).forEach(item => {
     inner.appendChild(renderItem(item, (file) => toggleFav(file)));
@@ -1142,6 +1153,35 @@ function renderProblemen() {
 </p>
   `;
   content.appendChild(inner);
+
+  renderBottombar();
+}
+
+function renderPoperingeLiedjes() {
+  currentTheme = "Poperingse liedjes";
+  document.getElementById("title").innerHTML = `
+    <div class="back" onclick="renderTheme('Poperinge')">&#8592; Terug</div>
+    <div class="title-text">LIEDJES</div>
+  `;
+
+  const content = document.getElementById("content");
+  content.innerHTML = "";
+  const inner = document.createElement("div");
+  inner.id = "content-inner";
+  content.appendChild(inner);
+
+  const items = data["Poperingse liedjes"] || [];
+
+  if (items.length === 0) {
+    const empty = document.createElement("div");
+    empty.style.cssText = "text-align:center; padding:40px 20px; color:#888; font-size:18px;";
+    empty.textContent = "Nog geen liedjes toegevoegd.";
+    inner.appendChild(empty);
+  } else {
+    items.forEach(item => {
+      inner.appendChild(renderItem(item, (file) => toggleFav(file)));
+    });
+  }
 
   renderBottombar();
 }
