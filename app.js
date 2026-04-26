@@ -644,7 +644,7 @@ async function loadSounds() {
 // =======================
 function buildData() {
   data = {};
-  [...THEME_ORDER, ...REGIO_THEMES, "Poperingse liedjes"]].forEach(t => { data[t] = []; });
+  [...THEME_ORDER, ...REGIO_THEMES, "Poperingse liedjes"].forEach(t => { data[t] = []; });
 
   sounds.forEach(s => {
     const file = cleanPath(s.fileName);
