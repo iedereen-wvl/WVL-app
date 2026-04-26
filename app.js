@@ -28,7 +28,7 @@ const THEME_ORDER = [
   "Alles"
 ];
 
-const REGIO_THEMES = ["Oostende", "Ieper", "Kortrijk", "Brugge", "Roeselare"];
+const REGIO_THEMES = ["Oostende", "Ieper", "Poperinge", "Kortrijk", "Brugge", "Roeselare"];
 
 const CATEGORY_MAP = {
   "uitdrukking":    "Uitdrukkingen",
@@ -56,6 +56,7 @@ const CATEGORY_MAP = {
   "onderweg":       "Onderweg",
   "oostende":       "Oostende",
   "ieper":          "Ieper",
+  "poperinge":          "Poperinge",
   "kortrijk":       "Kortrijk",
   "brugge":         "Brugge",
   "roeselare":      "Roeselare",
